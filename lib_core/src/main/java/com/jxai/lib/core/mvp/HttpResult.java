@@ -6,7 +6,6 @@ public class HttpResult<T> implements Serializable {
     public int eventId;
     public String status;
     public String description;
-    public boolean hasmore;
     public T data;
 
     public static String SUCCESS = "OK";
@@ -44,7 +43,4 @@ public class HttpResult<T> implements Serializable {
         return ERROR.equals(status);
     }
 
-    public boolean hasMore() {
-        return hasmore;
-    }
 }

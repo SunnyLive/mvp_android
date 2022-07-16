@@ -38,7 +38,6 @@ dependencies {
     api root.dependencies.viewmodel
     api root.dependencies.legacyv4
     api root.dependencies.splashscreen
-    api root.dependencies.rxpermission
     api root.dependencies.rxandroid
     api root.dependencies.rxjava
     api root.dependencies.rxlifecycle2
@@ -53,8 +52,6 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
-    debugImplementation root.dependencies.logCat
-    releaseImplementation root.dependencies.logCatNoOp
-    implementation root.dependencies.logCatfile
+    implementation root.dependencies.logutil
 
 }

@@ -26,7 +26,6 @@ abstract class BaseRxFragment: RxFragment(), IMvpView {
                     createData<T>(tHttpResult.data)
                 } else {
                     if (tHttpResult.isTokenInvalid()) {
-                        tokenIInvalid()
                         Flowable.error<T>(Throwable(tHttpResult.description))
                     } else {
                         Flowable.error<T>(Throwable(tHttpResult.description))

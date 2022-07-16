@@ -4,7 +4,7 @@
     package="com.jxai.camera">
 
     <application
-        android:name="App"
+        android:name=".config.AppConfig"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"

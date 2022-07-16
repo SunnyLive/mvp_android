@@ -21,7 +21,6 @@ abstract class BaseRxActivity : RxAppCompatActivity() ,IMvpView{
                 if (tHttpResult.isSuccess) {
                     createData(tHttpResult.data)
                 } else if (tHttpResult.isTokenInvalid) {
-                    tokenIInvalid()
                     Flowable.error(Throwable(tHttpResult.description))
                 } else {
                     Flowable.error(Throwable(tHttpResult.description))

@@ -3,7 +3,6 @@ package com.jxai.lib.core.mvp;
 import android.text.TextUtils;
 
 import com.google.gson.Gson;
-import com.jxai.lib.core.HttpResult;
 
 import java.lang.ref.Reference;
 import java.lang.ref.WeakReference;
@@ -80,12 +79,7 @@ public class BasePresenter<T extends IMvpView> implements IPresenter<T> {
     public <T> FlowableTransformer<HttpResult<T>, T> handleResult() {
         return upstream -> upstream.flatMap((Function<HttpResult<T>, Flowable<T>>) tHttpResult -> {
             if (tHttpResult.isSuccess()) {
-                return createData(tHttpResult.getData());
-            } else if (tHttpResult.isTokenInvalid()) {
-                getView().tokenIInvalid();
-                return Flowable.error(new Throwable(tHttpResult.getDescription()));
-            } else if (tHttpResult.isServiceFailed() || !TextUtils.isEmpty(tHttpResult.getDescription())) {
-                return Flowable.error(new Throwable(tHttpResult.getDescription()));
+                return createData(tHttpResult.data);
             } else {
                 String des = "网络出错，请稍后重试！";
                 return Flowable.error(new Throwable(des));

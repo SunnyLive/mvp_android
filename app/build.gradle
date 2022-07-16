@@ -43,7 +43,8 @@ dependencies {
 
     implementation project(":module_camera")
 
-    api rootProject.ext.dependencies.libARouterCompiler
+    kapt rootProject.ext.dependencies.libARouterCompiler
+    implementation root.dependencies.logutil
     implementation 'androidx.core:core-ktx:1.7.0'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'

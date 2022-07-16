@@ -1,6 +1,7 @@
 ext {
     //组件独立调试开关, 每次更改值后要同步工程
     isDebug = false
+    isModule = false
     android = [
             // 编译 SDK 版本
             compileSdkVersion: 31,
@@ -28,7 +29,7 @@ ext {
             "viewmodel"         : 'androidx.lifecycle:lifecycle-viewmodel:2.4.0',
             "legacyv4"          : 'androidx.legacy:legacy-support-v4:1.0.0',
             "splashscreen"      : 'androidx.core:core-splashscreen:1.0.0-alpha01',
-            "rxpermission"      : 'com.github.tbruyelle:rxpermissions:0.10.2',
+            "rxpermission"      : 'com.github.tbruyelle:rxpermissions:0.12',
             "rxandroid"         : 'io.reactivex.rxjava2:rxandroid:2.1.1',
             "rxjava"            : 'io.reactivex.rxjava2:rxjava:2.2.11',
             "rxlifecycle2"      : 'com.trello.rxlifecycle2:rxlifecycle-components:2.1.0',
@@ -36,11 +37,10 @@ ext {
             "libARouterCompiler": 'com.alibaba:arouter-compiler:1.5.2',
             "eventbus"          : 'org.greenrobot:eventbus:3.1.1',
             "gson"              : 'com.google.code.gson:gson:2.8.9',
-            "logCat"            : 'com.apkfuns.logutils:library:1.7.5',
-            "logCatNoOp"        : 'com.apkfuns.logutils:logutils-no-op:1.7.5',
-            "logCatfile"        : 'com.apkfuns.log2file:log2file:1.3.1',
+            "logutil"           : 'com.orhanobut:logger:2.2.0',
+            "converterGson"     : 'com.squareup.retrofit2:converter-gson:2.6.1',
+            "adapterRxjava"     : 'com.squareup.retrofit2:adapter-rxjava2:2.6.1', // 必要依赖，和Rxjava结合必须用到，下面会提到
             "retrofit"          : 'com.squareup.retrofit2:retrofit:2.8.1', // 必要retrofit依赖
-            "adapterRxjava"     : 'com.squareup.retrofit2:adapter-rxjava2:2.5.0', // 必要依赖，和Rxjava结合必须用到，下面会提到
             "okHttpLogging"     : 'com.squareup.okhttp3:logging-interceptor:4.9.0', //， log依赖，如果需要打印OkHttpLog需要添加
     ]
 }

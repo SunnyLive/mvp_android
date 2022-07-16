@@ -2,10 +2,10 @@ plugins {
     id 'org.jetbrains.kotlin.android'
 }
 
-if (rootProject.ext.isDebug) {
-    apply plugin: 'com.android.library'
-} else {
+if (rootProject.ext.isModule) {
     apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
 }
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
@@ -25,6 +25,7 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         kapt {
             arguments {
+                print(project.getName())
                 arg("AROUTER_MODULE_NAME", project.getName())
             }
         }
@@ -59,7 +60,8 @@ android {
 dependencies {
     api project(':lib_common')
 
-    api rootProject.ext.dependencies.libARouterCompiler
+    kapt rootProject.ext.dependencies.libARouterCompiler
+    implementation rootProject.ext.dependencies.logutil
     implementation 'androidx.core:core-ktx:1.7.0'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
