@@ -1,6 +1,6 @@
 package com.jxai.lib.common.mvp
 
-import com.jxai.lib.common.http.HttpUtil
+import com.jxai.lib.network.okhttp.HttpUtil
 import com.jxai.lib.core.mvp.BasePresenter
 import com.orhanobut.logger.Logger
 

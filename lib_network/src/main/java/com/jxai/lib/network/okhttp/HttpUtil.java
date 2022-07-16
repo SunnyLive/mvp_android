@@ -1,17 +1,15 @@
-package com.jxai.lib.common.http;
+package com.jxai.lib.network.okhttp;
 
-import com.jxai.lib.common.BuildConfig;
-import com.jxai.lib.network.okhttp.FileRequestBodyConverterFactory;
-import com.jxai.lib.network.okhttp.NetworkSSL;
-import com.jxai.lib.network.okhttp.SafeCheckInterceptor;
-import com.jxai.lib.network.okhttp.TrustManager;
+import android.util.Log;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.jxai.lib.network.BuildConfig;
 import com.orhanobut.logger.Logger;
 
-import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.OkHttpClient;
-import okhttp3.Request;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
@@ -30,10 +28,10 @@ public class HttpUtil {
 
 
     private Retrofit initClient(){
+        Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd HH:mm:ss").serializeNulls().create();
         return new Retrofit.Builder().client(provideOkHttpClient()).baseUrl(mBaseURL)
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-                .addConverterFactory(GsonConverterFactory.create())
-                .addConverterFactory(new FileRequestBodyConverterFactory())
+                .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
     }
 
@@ -53,35 +51,17 @@ public class HttpUtil {
      * @return OkHttpClient
      */
     private OkHttpClient provideOkHttpClient() {
-        OkHttpClient.Builder builder = new OkHttpClient.Builder();
-        builder.connectTimeout(60 * 1000, TimeUnit.MILLISECONDS).readTimeout(60 * 1000, TimeUnit.MILLISECONDS);
-        builder.addInterceptor(chain -> {
-            Request request = chain.request().newBuilder()
-                    .addHeader("Content-Type", "application/json")
-                    //.addHeader("Authorization", "Bearer")
-                    .build();
-            return chain.proceed(request);
+        HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor(message -> {
+            Log.i("OkHttpClient ",message);
         });
-        //添加统一验证
-        builder.addInterceptor(new SafeCheckInterceptor());
-        if (isDeBug) {
-            builder.addInterceptor(logInterceptor());
-            builder.sslSocketFactory(new NetworkSSL(TrustManager.trustAllCert),
-                    TrustManager.trustAllCert);//屏蔽ssl整数验证
-        }
-        return builder.build();
-    }
-
-
-
-    private HttpLoggingInterceptor logInterceptor() {
-        //新建log拦截器
-        HttpLoggingInterceptor interceptor =
-                new HttpLoggingInterceptor(message -> {
-                    Logger.i("OkHttpClient " + message);
-                });
-        interceptor.level(HttpLoggingInterceptor.Level.BODY);
-        return interceptor;
+        loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+        return new OkHttpClient.Builder()
+                .sslSocketFactory(new NetworkSSL(TrustManager.trustAllCert), TrustManager.trustAllCert)
+                .connectTimeout(60* 1000, TimeUnit.SECONDS)
+                .addInterceptor(loggingInterceptor)
+                .readTimeout(60 * 1000, TimeUnit.SECONDS)
+                .writeTimeout(60 * 1000, TimeUnit.SECONDS)
+                .build();
     }
 
 

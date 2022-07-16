@@ -8,6 +8,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 
 abstract class BaseRxActivity : RxAppCompatActivity() ,IMvpView{
+
     open fun <T> io_main(): FlowableTransformer<T, T>? {
         return FlowableTransformer { upstream: Flowable<T> ->
             upstream.subscribeOn(Schedulers.io())

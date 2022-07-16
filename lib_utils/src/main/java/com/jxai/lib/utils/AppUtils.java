@@ -1,4 +1,4 @@
-package com.jxai.lib.network.okhttp;
+package com.jxai.lib.utils;
 
 import android.content.Context;
 import android.content.pm.PackageInfo;

@@ -3,6 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.jxai.camera">
 
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+
+
     <application
         android:name=".config.AppConfig"
         android:allowBackup="true"

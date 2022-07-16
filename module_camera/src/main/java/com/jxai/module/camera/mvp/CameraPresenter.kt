@@ -1,13 +1,13 @@
 package com.jxai.module.camera.mvp
 
-import com.jxai.lib.common.http.HttpUtil
+import com.jxai.lib.network.okhttp.HttpUtil
 import com.jxai.lib.core.mvp.BasePresenter
 import com.orhanobut.logger.Logger
 
 class CameraPresenter : BasePresenter<ICameraView>() {
 
     private val mCameraApi by lazy {
-        HttpUtil.builder().setHttpURL("").isDeBug(true).build().createApi(CameraApi::class.java)
+        HttpUtil.builder().setHttpURL("http://10.101.0.100:5000").isDeBug(true).build().createApi(CameraApi::class.java)
     }
 
     fun requestServerVerify() {
