@@ -29,7 +29,7 @@ ext {
             "viewmodel"         : 'androidx.lifecycle:lifecycle-viewmodel:2.4.0',
             "legacyv4"          : 'androidx.legacy:legacy-support-v4:1.0.0',
             "splashscreen"      : 'androidx.core:core-splashscreen:1.0.0-alpha01',
-            "rxpermission"      : 'com.github.tbruyelle:rxpermissions:0.12',
+            "rxpermission"      : 'com.github.tbruyelle:rxpermissions:0.10.2',
             "rxandroid"         : 'io.reactivex.rxjava2:rxandroid:2.1.1',
             "rxjava"            : 'io.reactivex.rxjava2:rxjava:2.2.11',
             "rxlifecycle2"      : 'com.trello.rxlifecycle2:rxlifecycle-components:2.1.0',

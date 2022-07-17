@@ -47,6 +47,7 @@ dependencies {
     api root.dependencies.gson
     api root.dependencies.retrofit
     api root.dependencies.okHttpLogging
+    api root.dependencies.rxpermission
 
     implementation 'androidx.core:core-ktx:1.7.0'
     testImplementation 'junit:junit:4.13.2'

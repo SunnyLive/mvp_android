@@ -1,5 +1,6 @@
 package com.jxai.module.camera.mvp
 
+import android.util.Log
 import com.jxai.lib.network.okhttp.HttpUtil
 import com.jxai.lib.core.mvp.BasePresenter
 import com.orhanobut.logger.Logger
@@ -7,11 +8,12 @@ import com.orhanobut.logger.Logger
 class CameraPresenter : BasePresenter<ICameraView>() {
 
     private val mCameraApi by lazy {
-        HttpUtil.builder().setHttpURL("http://10.101.0.100:5000").isDeBug(true).build().createApi(CameraApi::class.java)
+        HttpUtil.builder().setHttpURL("http://www.baidu.com").build().createApi(CameraApi::class.java)
     }
 
     fun requestServerVerify() {
-        val params = HashMap<String, String>();
+        val params = HashMap<String, String>()
+        //params.put("image","sss")
         view?.showLoading()
         addNet(
             mCameraApi.requestServerVerify(createRequestBody(params)).compose(io_main()).subscribe({
@@ -21,8 +23,9 @@ class CameraPresenter : BasePresenter<ICameraView>() {
                 view?.apply {
                     hideLoading()
                     netError()
+
                 }
-                Logger.e("ms", it)
+                Log.e("ms", "_____"+it)
             })
         )
 
