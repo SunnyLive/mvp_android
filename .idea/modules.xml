@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JXCamera.iml" filepath="$PROJECT_DIR$/.idea/modules/JXCamera.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/JXCamera.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/JXCamera.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/JXCamera.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/JXCamera.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/JXCamera.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/JXCamera.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/JXCamera.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/JXCamera.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lib_common/JXCamera.lib_common.iml" filepath="$PROJECT_DIR$/.idea/modules/lib_common/JXCamera.lib_common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lib_common/JXCamera.lib_common.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/lib_common/JXCamera.lib_common.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lib_common/JXCamera.lib_common.main.iml" filepath="$PROJECT_DIR$/.idea/modules/lib_common/JXCamera.lib_common.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lib_common/JXCamera.lib_common.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/lib_common/JXCamera.lib_common.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lib_core/JXCamera.lib_core.iml" filepath="$PROJECT_DIR$/.idea/modules/lib_core/JXCamera.lib_core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lib_core/JXCamera.lib_core.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/lib_core/JXCamera.lib_core.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lib_core/JXCamera.lib_core.main.iml" filepath="$PROJECT_DIR$/.idea/modules/lib_core/JXCamera.lib_core.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lib_core/JXCamera.lib_core.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/lib_core/JXCamera.lib_core.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lib_network/JXCamera.lib_network.iml" filepath="$PROJECT_DIR$/.idea/modules/lib_network/JXCamera.lib_network.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lib_network/JXCamera.lib_network.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/lib_network/JXCamera.lib_network.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lib_network/JXCamera.lib_network.main.iml" filepath="$PROJECT_DIR$/.idea/modules/lib_network/JXCamera.lib_network.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lib_network/JXCamera.lib_network.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/lib_network/JXCamera.lib_network.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lib_picture/JXCamera.lib_picture.iml" filepath="$PROJECT_DIR$/.idea/modules/lib_picture/JXCamera.lib_picture.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lib_picture/JXCamera.lib_picture.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/lib_picture/JXCamera.lib_picture.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lib_picture/JXCamera.lib_picture.main.iml" filepath="$PROJECT_DIR$/.idea/modules/lib_picture/JXCamera.lib_picture.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lib_picture/JXCamera.lib_picture.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/lib_picture/JXCamera.lib_picture.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lib_utils/JXCamera.lib_utils.iml" filepath="$PROJECT_DIR$/.idea/modules/lib_utils/JXCamera.lib_utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lib_utils/JXCamera.lib_utils.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/lib_utils/JXCamera.lib_utils.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lib_utils/JXCamera.lib_utils.main.iml" filepath="$PROJECT_DIR$/.idea/modules/lib_utils/JXCamera.lib_utils.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lib_utils/JXCamera.lib_utils.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/lib_utils/JXCamera.lib_utils.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/module_camera/JXCamera.module_camera.iml" filepath="$PROJECT_DIR$/.idea/modules/module_camera/JXCamera.module_camera.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/module_camera/JXCamera.module_camera.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/module_camera/JXCamera.module_camera.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/module_camera/JXCamera.module_camera.main.iml" filepath="$PROJECT_DIR$/.idea/modules/module_camera/JXCamera.module_camera.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/module_camera/JXCamera.module_camera.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/module_camera/JXCamera.module_camera.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/module_daemon/JXCamera.module_daemon.iml" filepath="$PROJECT_DIR$/.idea/modules/module_daemon/JXCamera.module_daemon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/module_daemon/JXCamera.module_daemon.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/module_daemon/JXCamera.module_daemon.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/module_daemon/JXCamera.module_daemon.main.iml" filepath="$PROJECT_DIR$/.idea/modules/module_daemon/JXCamera.module_daemon.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/module_daemon/JXCamera.module_daemon.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/module_daemon/JXCamera.module_daemon.unitTest.iml" />
+    </modules>
+  </component>
+</project>

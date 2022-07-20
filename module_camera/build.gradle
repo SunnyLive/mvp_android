@@ -14,7 +14,7 @@ android {
     compileSdk rootProject.ext.android.compileSdkVersion
 
     defaultConfig {
-        if (rootProject.ext.isDebug){
+        if (rootProject.ext.isModule){
             applicationId "com.jxai.module.camera"
         }
         minSdk rootProject.ext.android.minSdkVersion
@@ -33,7 +33,7 @@ android {
 
     sourceSets{
         main{
-            if(rootProject.ext.isDebug)
+            if(rootProject.ext.isModule)
             {
                 manifest.srcFile 'src/main/debug/AndroidManifest.xml'
             }else{
@@ -62,6 +62,7 @@ dependencies {
 
     kapt rootProject.ext.dependencies.libARouterCompiler
     implementation rootProject.ext.dependencies.logutil
+    implementation rootProject.ext.dependencies.codecAndroid
     implementation 'androidx.core:core-ktx:1.7.0'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'

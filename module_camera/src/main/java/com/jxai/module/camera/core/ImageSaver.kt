@@ -11,7 +11,7 @@ import java.nio.ByteBuffer
 /**
  * Saves a JPEG [Image] into the specified [File].
  */
-internal class ImageSaver(
+internal abstract class ImageSaver(
         /**
          * The JPEG image
          */
@@ -32,6 +32,7 @@ internal class ImageSaver(
             output = FileOutputStream(file).apply {
                 write(bytes)
             }
+            onEncode(file)
         } catch (e: IOException) {
             Log.e(TAG, e.toString())
         } finally {
@@ -46,10 +47,13 @@ internal class ImageSaver(
         }
     }
 
+    abstract fun onEncode(file: File)
+
     companion object {
         /**
          * Tag for the [Log].
          */
-        private val TAG = "ImageSaver"
+        private const val TAG = "ImageSaver"
     }
+
 }

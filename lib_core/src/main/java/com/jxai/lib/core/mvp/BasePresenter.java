@@ -1,7 +1,5 @@
 package com.jxai.lib.core.mvp;
 
-import android.text.TextUtils;
-
 import com.google.gson.Gson;
 
 import java.lang.ref.Reference;
@@ -23,7 +21,7 @@ import okhttp3.RequestBody;
 public class BasePresenter<T extends IMvpView> implements IPresenter<T> {
 
 
-    Gson gson;
+    public Gson gson;
     protected CompositeDisposable compositeDisposable;
 
     public BasePresenter() {

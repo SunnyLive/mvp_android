@@ -1,0 +1,65 @@
+[
+  {
+    "wajueji": {
+      "title": "挖掘机",
+      "display": "1",
+      "threshold": "50"
+    }
+  },
+  {
+    "diaoche": {
+      "title": "吊车",
+      "display": "1",
+      "threshold": "50"
+    }
+  },
+  {
+    "chanche": {
+      "title": "铲车",
+      "display": "1",
+      "threshold": "50"
+    }
+  },
+  {
+    "yanhuo": {
+      "title": "烟火",
+      "display": "1",
+      "threshold": "50"
+    }
+  },
+  {
+    "huoyan": {
+      "title": "火焰",
+      "display": "1",
+      "threshold": "50"
+    }
+  },
+  {
+    "fandouche": {
+      "title": "翻斗车",
+      "display": "1",
+      "threshold": "50"
+    }
+  },
+  {
+    "tadiao": {
+      "title": "塔吊",
+      "display": "1",
+      "threshold": "50"
+    }
+  },
+  {
+    "shuinibengche": {
+      "title": "水泥泵车",
+      "display": "1",
+      "threshold": "50"
+    }
+  },
+  {
+    "qitashigongjixie": {
+      "title": "其他施工机械",
+      "display": "1",
+      "threshold": "50"
+    }
+  }
+]

@@ -1,6 +1,5 @@
 ext {
     //组件独立调试开关, 每次更改值后要同步工程
-    isDebug = false
     isModule = false
     android = [
             // 编译 SDK 版本
@@ -8,7 +7,7 @@ ext {
             // 最低兼容 Android 版本
             minSdkVersion    : 21,
             // 最高兼容 Android 版本
-            targetSdkVersion : 31,
+            targetSdkVersion : 28,
             // 当前版本编号
             versionCode      : 1,
             // 当前版本信息
@@ -42,5 +41,9 @@ ext {
             "adapterRxjava"     : 'com.squareup.retrofit2:adapter-rxjava2:2.6.1', // 必要依赖，和Rxjava结合必须用到，下面会提到
             "retrofit"          : 'com.squareup.retrofit2:retrofit:2.8.1', // 必要retrofit依赖
             "okHttpLogging"     : 'com.squareup.okhttp3:logging-interceptor:4.9.0', //， log依赖，如果需要打印OkHttpLog需要添加
+            "mqttv3"            : 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.1.0',  // mqtt相关依赖
+            "mqttvAndroid"      : 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1',//mqttAndroid
+            "codecAndroid"      : 'org.jcodec:jcodec-android:0.1.9',
+            "libjpegCompress"   : 'com.github.Medivh2011:libjpegCompress:0.5.4', //哈夫曼压缩图片
     ]
 }
