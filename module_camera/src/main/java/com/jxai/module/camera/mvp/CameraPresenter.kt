@@ -29,17 +29,18 @@ class CameraPresenter : BasePresenter<ICameraView>() {
         mUiHandler.sendMessageDelayed(Message(),10 * 1000)
     }
 
+
+    /**
+     *
+     * 这里是请求服务端ai验证图片
+     *
+     * [sourceImg] 图片的地址
+     *
+     */
     fun requestServerVerify(sourceImg:String) {
 
-        val img = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM)
-            .toString() + "/jx_camera/result.jpeg"
-        val isSuccess = Base64Util.base64ToFile(sourceImg,img)
-        if (isSuccess) {
-            Logger.d("图片结论保存成功")
-        }
-
         val params = HashMap<String, String>()
-        params.put("image",sourceImg)
+        params["image"] = sourceImg
         view?.showLoading()
         addNet(
             mCameraApi.requestServerVerify(createRequestBody(params)).compose(io_main()).subscribe({

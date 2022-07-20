@@ -50,30 +50,12 @@ class CameraActivity : CommonActivity<ICameraView, CameraPresenter>(), ICameraVi
 
             updateMqttMsg()
 
-            Luban.with(this@CameraActivity).load(sourceFile)
-                .ignoreBy(50).setCompressListener(object :OnCompressListener{
-                    override fun onStart() {
-
-                    }
-                    override fun onSuccess(file: File?) {
-                        file?.apply {
-                            mImageToBase64 = Base64Util.imageToBase64(file.path)
-                            p?.requestServerVerify(mImageToBase64)
-                            //这里删除图片
-                            if (exists()) {
-                                sourceFile.delete()
-                                delete()
-                            }
-                        }
-
-                    }
-
-                    override fun onError(e: Throwable?) {
-
-                    }
-
-                })
-                .launch()
+            mImageToBase64 = Base64Util.imageToBase64(sourceFile.path)
+            p?.requestServerVerify(mImageToBase64)
+            //这里删除图片
+            if (sourceFile.exists()) {
+                sourceFile.delete()
+            }
         }
 
 
